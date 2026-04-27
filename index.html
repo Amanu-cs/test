@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFlow | School Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">EduFlow</div>
+            <ul>
+                <li class="active" onclick="toggleView('dashboard')">Dashboard</li>
+                <li onclick="toggleView('students')">Students</li>
+                <li onclick="toggleView('attendance')">Attendance</li>
+                <li onclick="toggleView('exams')">Exams</li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <h1>Welcome, Admin</h1>
+                <div class="user-profile">Profile</div>
+            </header>
+
+            <div id="dashboard-view" class="view">
+                <div class="stats-grid">
+                    <div class="stat-card"><h3>Total Students</h3><p id="student-count">1,240</p></div>
+                    <div class="stat-card"><h3>Teachers</h3><p>85</p></div>
+                    <div class="stat-card"><h3>Attendance</h3><p>94%</p></div>
+                </div>
+            </div>
+
+            <div id="students-view" class="view" style="display:none;">
+                <h2>Student Registry</h2>
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentData">
+                        </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
